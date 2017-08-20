@@ -1,0 +1,21 @@
+
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>tempat baru</ion-title>
+	</ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
+		<ion-list>
+			<ion-item>
+				<ion-label >Judul</ion-label>
+				<ion-input type="text" name="title" ngModel required></ion-input>
+			</ion-item>
+			<button ion-button block type="submit" [disabled]="!f.valid">Tambah</button>
+		</ion-list>
+	</form>
+</ion-content>
